@@ -26,7 +26,7 @@ const Category: React.FC<QuoteProps> = ({ category }) => {
   // eslint-disable-next-line no-self-compare
   const [quoteData, setQuoteData] = useState<QuoteData | null>(null);
   console.log("🚀 ~ file: App.tsx:110 ~ quoteData:", quoteData);
-  const shareUrl = "https://example.com"; // Replace with your own URL
+  const shareUrl = "https://randomquotegenerator-eight.vercel.app/";
   const [showModal, setShowModal] = useState(false);
 
   const shareBtn = () => {
@@ -127,7 +127,7 @@ const Category: React.FC<QuoteProps> = ({ category }) => {
       {showModal && (
         <Modal title="name" toggleClick={shareBtn}>
           <div className="flex flex-col  items-center justify-center py-5 px-2 h-[100px] w-[250px] gap-3 rounded-md bg-white">
-            <div className="flex w-full justify-end items-end">
+            <div className="flex items-end justify-end w-full">
               <button onClick={shareBtn}>
                 <RxCross2 className="text-[20px] " />
               </button>
@@ -136,7 +136,7 @@ const Category: React.FC<QuoteProps> = ({ category }) => {
               <TwitterShareButton
                 url={shareUrl}
                 title={quoteData?.quote}
-                className=" flex justify-center items-center "
+                className="flex items-center justify-center "
               >
                 <TwitterIcon />
               </TwitterShareButton>
@@ -144,7 +144,7 @@ const Category: React.FC<QuoteProps> = ({ category }) => {
               <FacebookShareButton
                 url={shareUrl}
                 quote={quoteData?.quote}
-                className=" flex justify-center items-center "
+                className="flex items-center justify-center "
               >
                 <FacebookIcon />
               </FacebookShareButton>
@@ -152,7 +152,7 @@ const Category: React.FC<QuoteProps> = ({ category }) => {
               <WhatsappShareButton
                 url={shareUrl}
                 title={quoteData?.quote}
-                className=" flex justify-center items-center "
+                className="flex items-center justify-center "
               >
                 <WhatsappIcon />
               </WhatsappShareButton>
