@@ -96,7 +96,7 @@ const Category: React.FC<QuoteProps> = ({ category }) => {
   };
   return (
     <div className="max-w-[1220px] mx-auto w-full flex flex-col justify-center items-center h-screen  px-4 md:px-0">
-      <h1 className="font-extrabold md:text-[72px] text-[32px] md:leading-none  leading-[30px] py-10">
+      <h1 className="font-extrabold md:text-[72px] text-[32px] md:leading-none  leading-[30px] py-10 text-rose-500">
         {capitalizeFirstLetter(category)}
       </h1>
       {quoteData ? (
